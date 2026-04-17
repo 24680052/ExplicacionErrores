@@ -3,7 +3,7 @@
 # Error 1 del codigo Dashboard view
 ## Codigo con errores
 
-`
+``
 import flet as ft
 from flet.controls.material.icons import Icons
 
@@ -120,11 +120,11 @@ class DashboardView(ft.Container):
             ], alignment="center")
         ) 
 
-        `
+        ``
 
 ## Codigo modificado y corregido 
 
-        `
+``
         import flet as ft
 from flet.controls.material.icons import Icons
 
@@ -241,7 +241,7 @@ class DashboardView(ft.Container):
             ], alignment="center")
         )
 
-        `
+``
 
 ## Dashboard view
 ### Error 1: Cálculo incorrecto de la ganancia
