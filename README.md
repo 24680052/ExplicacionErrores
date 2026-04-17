@@ -1,4 +1,5 @@
 # ExplicacionErrores
+
 En esta aplicaccion hubo 6 errores
 2 en dashboardview
 2 en historialview
