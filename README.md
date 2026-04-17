@@ -862,14 +862,23 @@ Ejecutar la aplicacion
 En la misma terminal pondras `python main.py`
 # Ejecucion de la aplicacion 
 ## Pestaña de ventas 
+
 <img width="1261" height="703" alt="{86A42304-1F1E-4182-88A0-5A30F1B51C0F}" src="https://github.com/user-attachments/assets/d38bcaf2-ff44-4f3f-bb85-f1260b1f85f7" />
+
 ## Pestaña de gastos
+
 <img width="1260" height="698" alt="{9F2E6006-F5AB-4C52-A715-B85D969861C1}" src="https://github.com/user-attachments/assets/ffe76b7f-60ed-47f3-90cd-15cb1472a2be" />
+
 ## Pestaña de dashboard
+
 <img width="1254" height="703" alt="{A928BD5B-6231-4E19-8247-280CE8C77447}" src="https://github.com/user-attachments/assets/42faaf85-8c93-41b8-975a-5fc58b6121e0" />
+
 ## Pestaña de historial de gastos 
+
 <img width="1266" height="699" alt="{590D0199-3D7B-40CB-B2B3-9B9C1A27D70D}" src="https://github.com/user-attachments/assets/5d6b824a-ba0e-4c66-b191-f7be33f39d8a" />
+
 ## Pestaña de cerrar dia 
+
 <img width="1260" height="696" alt="{B94F87A2-262E-4D5B-BFB9-38F508DFFD30}" src="https://github.com/user-attachments/assets/237a305f-9750-49db-9dff-25752c84911a" />
 
 # En general 
