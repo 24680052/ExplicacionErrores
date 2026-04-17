@@ -1,5 +1,9 @@
 # ExplicacionErrores
-
+En esta aplicaccion hubo 6 errores
+2 en dashboardview
+2 en historialview
+2 en gastosview
+se modificacion y corrigieron varios errores para que la aplicacion pudiera verse correctamente 
 # Error 1 del codigo Dashboard view
 ## Codigo con errores
 
@@ -790,53 +794,92 @@ class GastosView(ft.Container):
 
         ``
 
-Este documento describe los errores identificados en el módulo GastosView, así como su causa y solución aplicada.
+### Error 1: Tipo de dato incorrecto al guardar el monto
 
-🔴 Error 1: Tipo de dato incorrecto al guardar el monto
+### Tipo de error: Tipo de dato / Lógica
 
-Tipo de error: Tipo de dato / Lógica
-
-Descripción:
+### Descripción:
 El monto del gasto no se estaba almacenando correctamente, lo que podía generar problemas en cálculos posteriores o en la base de datos.
 
-Causa:
+### Causa:
 Aunque el valor del monto se validaba y convertía a float, al momento de guardarlo se enviaba el valor original (string):
 
-self.dm.registrar_gasto(self.input_concepto.value, self.input_monto.value)
+`self.dm.registrar_gasto(self.input_concepto.value, self.input_monto.value)`
 
-Solución:
+### Solución:
 Se corrigió para enviar el valor ya convertido a número:
 
-self.dm.registrar_gasto(self.input_concepto.value, monto)
+`self.dm.registrar_gasto(self.input_concepto.value, monto)`
 
-Resultado:
+### Resultado:
 
 El monto se guarda como número (float)
 Se evitan errores en cálculos futuros
 Se mantiene consistencia en los datos
-🔴 Error 2: Falta de actualización de la interfaz (UI)
+### Error 2: Falta de actualización de la interfaz (UI)
 
-Tipo de error: Flujo del framework (Flet)
+### Tipo de error: Flujo del framework (Flet)
 
-Descripción:
+### Descripción:
 El mensaje de confirmación (SnackBar) no siempre se mostraba correctamente después de registrar un gasto.
 
-Causa:
+### Causa:
 Aunque se abría el SnackBar, no se actualizaba la página:
 
-self.main_page.snack_bar.open = True
+`self.main_page.snack_bar.open = True`
 
-Solución:
+### Solución:
 Se agregó la actualización de la interfaz:
 
-self.main_page.snack_bar.open = True
-self.main_page.update()
+`self.main_page.snack_bar.open = True
+self.main_page.update()`
 
-Resultado:
+### Resultado:
 
 El mensaje se muestra correctamente en pantalla
 La interfaz refleja los cambios inmediatamente
 Se mejora la experiencia del usuario
-✅ Conclusión
+### Conclusión
 
-Las correcciones realizadas aseguran que los datos se manejen con el tipo correcto y que la interfaz responda adecuadamente a las acciones del usuario. Esto mejora la estabilidad del sistema y la interacción con el usuario.        
+Las correcciones realizadas aseguran que los datos se manejen con el tipo correcto y que la interfaz responda adecuadamente a las acciones del usuario. Esto mejora la estabilidad del sistema y la interacción con el usuario.
+
+# Otro error que se modifico fue en la parte de gastos 
+<img width="1196" height="705" alt="image" src="https://github.com/user-attachments/assets/a8f20d94-2f41-4bba-bd51-d6a9b9f134c1" />
+
+Se elimino lo que habia ya dentro de los corchetes y se dejo solo los corchetes como ya mostrado 
+
+# Para hacer la ejecucion 
+# Pasos 
+# Paso 1: 
+Se clonara el repositorio y pondras en tu terminal 
+`git clone https://github.com/TU_USUARIO/POS_TAP.GIT`
+Dejaras que se clone todos los codigos 
+# Paso 2: 
+en tu misma terminal pondras `cd POS_TAP`
+abrira la carpeta 
+# Paso 3: 
+Ejecutar la aplicacion 
+En la misma terminal pondras `python main.py`
+# Ejecucion de la aplicacion 
+## Pestaña de ventas 
+<img width="1261" height="703" alt="{86A42304-1F1E-4182-88A0-5A30F1B51C0F}" src="https://github.com/user-attachments/assets/d38bcaf2-ff44-4f3f-bb85-f1260b1f85f7" />
+## Pestaña de gastos
+<img width="1260" height="698" alt="{9F2E6006-F5AB-4C52-A715-B85D969861C1}" src="https://github.com/user-attachments/assets/ffe76b7f-60ed-47f3-90cd-15cb1472a2be" />
+## Pestaña de dashboard
+<img width="1254" height="703" alt="{A928BD5B-6231-4E19-8247-280CE8C77447}" src="https://github.com/user-attachments/assets/42faaf85-8c93-41b8-975a-5fc58b6121e0" />
+## Pestaña de historial de gastos 
+<img width="1266" height="699" alt="{590D0199-3D7B-40CB-B2B3-9B9C1A27D70D}" src="https://github.com/user-attachments/assets/5d6b824a-ba0e-4c66-b191-f7be33f39d8a" />
+## Pestaña de cerrar dia 
+<img width="1260" height="696" alt="{B94F87A2-262E-4D5B-BFB9-38F508DFFD30}" src="https://github.com/user-attachments/assets/237a305f-9750-49db-9dff-25752c84911a" />
+
+# En general 
+
+Durante el desarrollo del sistema en Flet se identificaron y corrigieron diversos errores que afectaban tanto la lógica del sistema, como la visualización de datos y el flujo de la interfaz.
+
+En primer lugar, se corrigieron errores de lógica, como el cálculo incorrecto de la ganancia, donde se invertían los valores de ventas y gastos. También se solucionaron problemas en el manejo de datos, asegurando que valores numéricos como montos se almacenen con el tipo de dato correcto (float), evitando inconsistencias en cálculos posteriores.
+
+Por otro lado, se realizaron mejoras en la visualización de la información, como el escalado adecuado de gráficos de barras y el formateo correcto de datos complejos (por ejemplo, listas de productos), lo que permite una lectura más clara y profesional de los datos.
+
+Además, se corrigieron errores relacionados con la programación orientada a objetos (POO) y el uso del framework, especialmente en el manejo de atributos de clase (self) y eventos. Esto evitó fallos en tiempo de ejecución y mejoró la estructura del código.
+
+Finalmente, se optimizó el flujo de la interfaz de usuario (UI), asegurando que los cambios se reflejen correctamente en pantalla mediante actualizaciones explícitas (update()), y que las acciones como botones de recarga o notificaciones funcionen de manera adecuada.
